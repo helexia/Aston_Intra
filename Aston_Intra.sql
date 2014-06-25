@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Mar 24 Juin 2014 à 15:32
+-- Généré le : Mer 25 Juin 2014 à 12:30
 -- Version du serveur: 5.5.37
--- Version de PHP: 5.5.9-1ubuntu4
+-- Version de PHP: 5.5.9-1ubuntu4.1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -44,6 +44,31 @@ CREATE TABLE IF NOT EXISTS `cursus` (
   PRIMARY KEY (`id_utilisateurs`,`id_promotion`),
   KEY `id_promotion` (`id_promotion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `employe`
+--
+
+CREATE TABLE IF NOT EXISTS `employe` (
+  `id_entreprise` int(11) NOT NULL,
+  `id_utilisateurs` int(11) NOT NULL,
+  PRIMARY KEY (`id_entreprise`,`id_utilisateurs`),
+  KEY `id_utilisateurs` (`id_utilisateurs`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `entreprise`
+--
+
+CREATE TABLE IF NOT EXISTS `entreprise` (
+  `id_entreprise` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_entreprise`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -126,6 +151,13 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
 ALTER TABLE `cursus`
   ADD CONSTRAINT `cursus_ibfk_1` FOREIGN KEY (`id_utilisateurs`) REFERENCES `utilisateurs` (`id_utilisateurs`),
   ADD CONSTRAINT `cursus_ibfk_2` FOREIGN KEY (`id_promotion`) REFERENCES `promotion` (`id_promotion`);
+
+--
+-- Contraintes pour la table `employe`
+--
+ALTER TABLE `employe`
+  ADD CONSTRAINT `employe_ibfk_2` FOREIGN KEY (`id_utilisateurs`) REFERENCES `utilisateurs` (`id_utilisateurs`),
+  ADD CONSTRAINT `employe_ibfk_1` FOREIGN KEY (`id_entreprise`) REFERENCES `entreprise` (`id_entreprise`);
 
 --
 -- Contraintes pour la table `journee`
