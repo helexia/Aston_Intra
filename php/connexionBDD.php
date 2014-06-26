@@ -1,6 +1,6 @@
 <?php
 	try {
-		$bdd = new PDO('mysql:host = localhost; dbname=Aston_Intra','root','metallica');
+		$bdd = new PDO('mysql:host = localhost; dbname=Aston_Intra','root','');
 	}
 	
 	catch(Exception $e) {
