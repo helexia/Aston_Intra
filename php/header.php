@@ -1,6 +1,6 @@
 <header>
 	<?php //include('');
-	if(!$_SESSION['login']) {
+	if(!isset($_SESSION['login'])) {
 	?>
 		<form method="POST" action="php/connexion.php">
 			<label for="input_login">Identifiant : </label>
