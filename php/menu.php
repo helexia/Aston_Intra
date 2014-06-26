@@ -8,7 +8,7 @@ switch($_SESSION['role']) {
 ?>
 		<nav>
     	  <ul>
-    	    <li> <a href="#">premier lien</a> </li>
+    	    <li> <a href="#">Premier lien</a> </li>
     	    <li> <a href="#">deuxieme lien</a> </li>
     	    <li> <a href="#">troisieme lien</a> </li>
     	    <li> <a href="#">quatrieme lien</a> </li>
