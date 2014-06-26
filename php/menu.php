@@ -1,5 +1,7 @@
 <?php
 
+$_SESSION['role'] = 'admin';
+
 switch($_SESSION['role']) {
     
 	case 'admin':
