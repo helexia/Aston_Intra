@@ -12,3 +12,13 @@ header {
 	height : 100px;
 	color : white;
 }
+footer {
+	background-color : lightgreen;
+	height : 100px;
+	color : white;
+}
+.logo {
+	background:url('../img/logo_aston.png') no-repeat;
+	width : 239px;
+	height : 80px;
+}
