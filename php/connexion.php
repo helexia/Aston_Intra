@@ -26,7 +26,7 @@
 			}
 			else {
 				// si le login ou le password sont incorrects :
-				echo ('login ou mot de passe incorrect');
+				echo ('Login ou mot de passe incorrect');
 			}
 
 		}
