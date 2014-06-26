@@ -15,8 +15,13 @@
 			include('php/header.php');
 			var_dump($_SESSION);
 			if (isset($_SESSION['login'])) {echo('coucou');}
+			
+
 		?>
 		<p>bienvenue sur le site intranet de l'école aston</p>
+		<?php
+			include('php/footer.php');
+		?>
 	</body>
 </html>
 	
